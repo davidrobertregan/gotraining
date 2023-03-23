@@ -7,17 +7,36 @@
 // Declare and initialize an anonymous struct type with the same three fields. Display the value.
 package main
 
+import "fmt"
+
 // Add imports.
 
 // Add user type and provide comment.
+type user struct {
+	name string
+	email string
+	age int
+}
 
 func main() {
 
 	// Declare variable of type user and init using a struct literal.
+	dave := user{
+		name: "Dave",
+		email: "dave@yahoo.com",
+		age: 29,
+	}
 
 	// Display the field values.
-
+	fmt.Println("Name:", dave.name)
+	fmt.Println("Email:", dave.email)
+	fmt.Println("Age:", dave.age)
 	// Declare a variable using an anonymous struct.
+	var a struct{
+		anonymous bool
+		greeting string
+	}
+	fmt.Println(a)
 
 	// Display the field values.
 }

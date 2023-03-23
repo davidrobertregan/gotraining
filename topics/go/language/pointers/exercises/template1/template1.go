@@ -9,17 +9,22 @@
 // _value that the pointer points to_.
 package main
 
+import "fmt"
+
 // Add imports.
 
 func main() {
 
 	// Declare an integer variable with the value of 20.
+	i := 20
 
 	// Display the address of and value of the variable.
-
+	fmt.Printf("Adress: %v; Value: %v\n", &i, i)
 	// Declare a pointer variable of type int. Assign the
 	// address of the integer variable above.
+	ip := &i
 
 	// Display the address of, value of and the value the pointer
 	// points to.
+	fmt.Printf("Address: %v; Value: %v; Points to: %v\n", &ip, ip, *ip)
 }
