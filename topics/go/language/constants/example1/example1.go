@@ -5,6 +5,8 @@
 // implementation in Go.
 package main
 
+import "fmt"
+
 func main() {
 
 	// Constants live within the compiler.
@@ -34,6 +36,7 @@ func main() {
 
 	// Constant zero will be of kind integer.
 	const zero = 1 / 3 // KindInt(1) / KindInt(3)
+	fmt.Println(zero)
 
 	// This is an example of constant arithmetic between typed and
 	// untyped constants. Must have like types to perform math.

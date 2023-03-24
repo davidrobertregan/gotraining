@@ -6,13 +6,19 @@
 // value before and after the call to your function.
 package main
 
+import "fmt"
+
 // Add imports.
 
 // Declare a type named user.
+type user struct{
+	name string
+	age int
+}
 
 // Create a function that changes the value of one of the user fields.
-func funcName( /* add pointer parameter, add value parameter */ ) {
-
+func hasBirthday(u *user) {
+	u.age++
 	// Use the pointer to change the value that the
 	// pointer points to.
 }
@@ -20,10 +26,11 @@ func funcName( /* add pointer parameter, add value parameter */ ) {
 func main() {
 
 	// Create a variable of type user and initialize each field.
-
+	dave := user{name: "Dave", age: 29}
 	// Display the value of the variable.
-
+	fmt.Println(dave)
 	// Share the variable with the function you declared above.
-
+	hasBirthday(&dave)
 	// Display the value of the variable.
+	fmt.Println(dave)
 }
